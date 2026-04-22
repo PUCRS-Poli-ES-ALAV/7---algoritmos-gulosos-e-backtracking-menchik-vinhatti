@@ -5,8 +5,10 @@ import java.util.List;
 public class ProblemaDoTroco {
 
     public static void main(String[] args) {
-        int[] moedasDisponiveis = {100, 25, 10, 5, 1};
-        int valorTroco = 289;
+        int[] moedasDisponiveis = {100, 30, 25, 10, 5, 1}; //neste caso o algoritmo guloso não encontra a solução ótima, pois ele sempre escolherá a moeda de 30 centavos, e depois não conseguirá completar o valor de 50 centavos com as moedas restantes. A solução ótima seria usar duas moedas de 25 centavos.
+        int valorTroco = 50;
+        // int[] moedasDisponiveis = {100, 50, 25, 10, 5, 1};
+        // 289
 
         System.out.println("Calculando troco para: " + valorTroco + " centavos");
         List<Integer> resultado = encontrarTrocoGuloso(moedasDisponiveis, valorTroco);
